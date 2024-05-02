@@ -1,0 +1,81 @@
+/* styles.css */
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set box-sizing to border-box for all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container styles */
+.container {
+    width: 500px; /* Increase width for bigger display box */
+    background-color: #ffffff; /* White background */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333; /* Dark grey text color */
+}
+
+/* Chat box styles */
+#chat-box {
+    max-height: 400px; /* Increase max-height for bigger display box */
+    overflow-y: auto;
+    border: 1px solid #cccccc; /* Light grey border */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: calc(100% - 22px); /* Adjust width for bigger display box */
+    background-color: #ffffff; /* White background */
+}
+
+/* User input container styles */
+.user-input-container {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 22px); /* Adjust width for bigger display box */
+    margin-bottom: 10px;
+}
+
+/* User input styles */
+#user-input {
+    flex: 1; /* Take remaining space */
+    padding: 12px;
+    border: 1px solid #cccccc; /* Light grey border */
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #ffffff; /* White background */
+}
+
+/* Send button styles */
+#send-button {
+    background-color: #666666; /* Dark grey button color */
+    color: #ffffff; /* White text color */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

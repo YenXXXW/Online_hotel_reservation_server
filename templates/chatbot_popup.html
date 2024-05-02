@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Popup Example</title>
+    <style>
+        /* Chatbot popup styles */
+        .chat-popup {
+            position: fixed;
+            bottom: 0;
+            right: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            max-width: 300px;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: none; /* Hidden by default */
+        }
+        .chat-popup.active {
+            display: block; /* Show when active */
+        }
+        .chat-popup-header {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .chat-popup-body {
+            padding: 10px;
+        }
+        .chat-popup-footer {
+            padding: 10px;
+            background-color: #333;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            text-align: right;
+        }
+        .chat-popup-close {
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Chatbot popup -->
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-popup-header">
+            Chatbot
+            <span class="chat-popup-close" onclick="closeChatPopup()">×</span>
+        </div>
+        <div class="chat-popup-body">
+            <!-- Chat messages will be displayed here -->
+            <p>Welcome to our website! How can I assist you today?</p>
+        </div>
+        <div class="chat-popup-footer">
+            <button onclick="openChat()">Open Chat</button>
+        </div>
+    </div>
+
+    <!-- Button to open chat -->
+    <button onclick="openChat()">Open Chat</button>
+
+    <script>
+        function openChat() {
+            var chatPopup = document.getElementById('chatPopup');
+            chatPopup.classList.add('active');
+        }
+
+        function closeChatPopup() {
+            var chatPopup = document.getElementById('chatPopup');
+            chatPopup.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

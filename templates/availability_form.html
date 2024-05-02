@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Availability</title>
+</head>
+<body>
+    <h1>Check Room Availability</h1>
+    <form action="/check_availability" method="post">
+        <label for="room_type">Room Type:</label>
+        <select name="room_type" id="room_type">
+            <option value="standard">Standard</option>
+            <option value="double">Double</option>
+            <option value="suite">Suite</option>
+        </select>
+        <br>
+        <label for="check_in_date">Check-in Date:</label>
+        <input type="date" name="check_in_date" id="check_in_date">
+        <br>
+        <button type="submit">Check Availability</button>
+    </form>
+</body>
+</html>
